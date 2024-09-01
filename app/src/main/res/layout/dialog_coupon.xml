@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+        <EditText
+            android:id="@+id/et_coupon_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/coupon_code"
+            android:background="@drawable/et_primary"
+            android:inputType="text"
+            android:padding="8dp"/>
+
+</RelativeLayout>

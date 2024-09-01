@@ -1,0 +1,2 @@
+rootProject.name = "TechCenter"
+include ':app'

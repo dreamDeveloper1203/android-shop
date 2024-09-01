@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<store.technologycenter.android.layouts.SquareRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/item_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="2dp"
+        app:cardUseCompatPadding="true"
+        app:strokeColor="@color/black"
+        app:strokeWidth="1dp">
+
+        <ImageView
+            android:id="@+id/iv_item"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@null"
+            android:src="@drawable/tech_center_logo" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/item_card_view"
+            android:layout_alignEnd="@id/item_card_view"
+            android:layout_alignBottom="@id/item_card_view"
+            android:layout_gravity="bottom"
+            android:background="#80000000"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:padding="10dp"
+            android:text="@string/app_name"
+            android:textColor="@color/light"
+            android:textSize="12sp" />
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_favorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|end"
+            android:layout_margin="5dp"
+            android:contentDescription="@null"
+            android:elevation="0dp"
+            android:src="@drawable/ic_heart_outline"
+            android:tint="@color/light"
+            app:backgroundTint="#80000000"
+            app:borderWidth="0dp"
+            app:elevation="0dp"
+            app:fabSize="mini" />
+
+
+    </androidx.cardview.widget.CardView>
+
+</store.technologycenter.android.layouts.SquareRelativeLayout>

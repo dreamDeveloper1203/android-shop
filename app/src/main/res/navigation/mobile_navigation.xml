@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_category">
+
+    <fragment
+        android:id="@+id/navigation_category"
+        android:name="store.technologycenter.android.ui.home.CategoryFragment"
+        android:label="@string/menu"
+        tools:layout="@layout/fragment_category" >
+        <action
+            android:id="@+id/action_navigation_category_to_navigation_products"
+            app:destination="@id/navigation_products" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_products"
+        android:name="store.technologycenter.android.ui.ProductsFragment"
+        android:label="@string/menu"
+        tools:layout="@layout/fragment_products" >
+        <argument
+            android:name="categoryId"
+            app:argType="string"
+            app:nullable="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="store.technologycenter.android.ui.search.SearchFragment"
+        android:label="@string/search"
+        tools:layout="@layout/fragment_search" />
+
+    <fragment
+        android:id="@+id/navigation_cart"
+        android:name="store.technologycenter.android.ui.cart.FragmentCart"
+        android:label="@string/cart"
+        tools:layout="@layout/fragment_cart" />
+    <fragment
+        android:id="@+id/navigation_favorite"
+        android:name="store.technologycenter.android.ui.favorite.FragmentFavorite"
+        android:label="@string/favorites"
+        tools:layout="@layout/fragment_favorites" />
+
+    <fragment
+        android:id="@+id/navigation_contact"
+        android:name="store.technologycenter.android.ui.contact.ContactFragment"
+        android:label="@string/contact"
+        tools:layout="@layout/fragment_contact" />
+</navigation>

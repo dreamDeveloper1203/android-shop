@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".OrderActivity">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout_order_type"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="@string/delivery" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="@string/pick_up"/>
+
+        </com.google.android.material.tabs.TabLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tab_layout_order_type"
+            android:layout_above="@+id/linear_layout_order">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text_warning"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/warning"
+                    android:padding="8dp"
+                    android:visibility="gone"
+                    android:textColor="@color/dark" />
+
+                <EditText
+                    android:id="@+id/et_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:hint="@string/name_required"
+                    android:inputType="text|textCapWords"
+                    android:background="@drawable/et_primary"/>
+
+                <EditText
+                    android:id="@+id/et_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:hint="@string/phone_number_required"
+                    android:inputType="phone"
+                    android:background="@drawable/et_primary"/>
+
+                <EditText
+                    android:id="@+id/et_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:hint="@string/email_address_optional"
+                    android:inputType="textEmailAddress"
+                    android:background="@drawable/et_primary"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:textColor="@color/muted"
+                    android:textSize="12sp"
+                    android:text="@string/email_input_help"/>
+
+
+
+                <LinearLayout
+                    android:id="@+id/linear_layout_delivery_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include
+                        layout="@layout/divider"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        tools:ignore="Suspicious0dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:textColor="@color/dark"
+                        android:textSize="16sp"
+                        android:text="@string/delivery_address"
+                        app:drawableStartCompat="@drawable/ic_location_outline"
+                        android:drawablePadding="8dp"
+                        app:drawableTint="@color/dark" />
+
+
+                    <Button
+                        android:id="@+id/btn_area"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_select"
+                        android:text="@string/select_area_required"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginBottom="10dp"
+                        android:textAllCaps="false"
+                        android:textStyle="normal"
+                        style="?android:attr/borderlessButtonStyle" />
+
+<!--                    <EditText-->
+<!--                        android:id="@+id/et_area"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:padding="8dp"-->
+<!--                        android:layout_marginEnd="8dp"-->
+<!--                        android:layout_marginStart="8dp"-->
+<!--                        android:layout_marginBottom="10dp"-->
+<!--                        android:hint="@string/select_area_required"-->
+<!--                        android:inputType="none"-->
+<!--                        android:background="@drawable/et_primary"/>-->
+
+                    <EditText
+                        android:id="@+id/et_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:hint="@string/address"
+                        android:inputType="text|textCapWords"
+                        android:background="@drawable/et_primary"/>
+
+
+
+                </LinearLayout>
+                <include
+                    layout="@layout/divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginBottom="10dp"
+                    />
+
+
+                <Button
+                    android:id="@+id/btn_payment_method"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_select"
+                    android:text="@string/payment_method"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginBottom="10dp"
+                    android:textAllCaps="false"
+                    android:textStyle="normal"
+                    style="?android:attr/borderlessButtonStyle"/>
+
+
+
+                <EditText
+                    android:id="@+id/et_comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/et_primary"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:hint="@string/comment_about_the_order"
+                    android:padding="8dp"
+                    android:lines="4"
+                    android:gravity="start"
+                    android:scrollbars="vertical"
+                    android:maxLines="4"
+                    android:minLines="4"
+                    android:maxLength="155"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginBottom="10dp" />
+
+
+                <Button
+                    android:id="@+id/btn_add_coupon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_select"
+                    android:text="@string/add_coupon"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginBottom="10dp"
+                    android:textAllCaps="false"
+                    style="?android:attr/borderlessButtonStyle" />
+
+
+            </LinearLayout>
+        </ScrollView>
+
+
+<LinearLayout
+    android:id="@+id/linear_layout_order"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <include layout="@layout/divider"/>
+    <TextView
+        android:id="@+id/text_subtotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"/>
+
+    <TextView
+        android:id="@+id/text_discount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"/>
+
+    <TextView
+        android:id="@+id/text_coupon_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"/>
+    <TextView
+        android:id="@+id/text_delivery_fee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"/>
+    <TextView
+        android:id="@+id/text_delivery_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"/>
+
+    <Button
+        android:id="@+id/btn_submit_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="?android:attr/borderlessButtonStyle"
+        android:textColor="@color/white"
+        android:background="@drawable/btn_primary"/>
+</LinearLayout>
+
+
+
+
+
+
+
+
+</RelativeLayout>

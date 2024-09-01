@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#4285f4</color>
+    <color name="primary_dark">#356ac3</color>
+    <color name="secondary">#757575</color>
+    <color name="danger">#d93025</color>
+    <color name="success">#00b74a</color>
+    <color name="warning">#ffa900</color>
+    <color name="dark">#2d2e32</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#111111</color>
+    <color name="light">#fcfcfc</color>
+    <color name="info">#39c0ed</color>
+    <color name="muted">#92939b</color>
+
+    <color name="orange">#F7931E</color>
+    <color name="orange_dark">#c67618</color>
+    <color name="red">#EC1D25</color>
+    <color name="dark_red">#C9191F</color>
+    <color name="black_transparent">#CC111111</color>
+
+
+
+</resources>

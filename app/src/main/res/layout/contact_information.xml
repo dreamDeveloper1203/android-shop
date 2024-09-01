@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+
+    <TextView
+        android:id="@+id/phone_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/dark"
+        android:textSize="16sp"
+        android:layout_marginBottom="@dimen/primary_horizontal_margin"
+        app:drawableStartCompat="@drawable/ic_phone"
+        android:drawablePadding="5dp"
+        app:drawableTint="@color/dark"
+        android:foreground="?android:attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        tools:ignore="UnusedAttribute" />
+
+    <TextView
+        android:id="@+id/email_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/dark"
+        android:textSize="16sp"
+        android:layout_marginBottom="@dimen/primary_horizontal_margin"
+        app:drawableTint="@color/dark"
+        app:drawableStartCompat="@drawable/ic_envelope"
+        android:drawablePadding="5dp"
+        android:foreground="?android:attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        tools:ignore="UnusedAttribute" />
+
+    <TextView
+        android:id="@+id/location_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/dark"
+        android:textSize="16sp"
+        android:layout_marginBottom="@dimen/primary_horizontal_margin"
+        app:drawableStartCompat="@drawable/ic_location_outline"
+        android:drawablePadding="5dp"
+        app:drawableTint="@color/dark"
+        android:foreground="?android:attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        tools:ignore="UnusedAttribute" />
+</LinearLayout>

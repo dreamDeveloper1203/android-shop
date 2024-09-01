@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.search.SearchFragment"
+    android:paddingBottom="?attr/actionBarSize">
+
+    <RelativeLayout
+        android:id="@+id/rl_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/edit_text_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_search_outline"
+            android:drawablePadding="5dp"
+            android:layout_margin="8dp"
+            android:hint="@string/type_here"
+            android:inputType="text"
+            android:paddingStart="12dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:paddingEnd="32dp"
+            android:background="@drawable/et_search"
+            tools:drawableTint="@color/muted" />
+
+        <ImageView
+            android:id="@+id/btn_search_clear"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_margin="18dp"
+            android:src="@drawable/ic_close"
+            android:contentDescription="@null"
+            app:tint="@color/muted" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_search" />
+
+    <ImageView
+        android:id="@+id/iv_empty_search_results"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/search_icon_multicolor"
+        android:contentDescription="@string/search"/>
+
+
+</RelativeLayout>

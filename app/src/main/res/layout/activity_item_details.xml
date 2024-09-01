@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/white"
+    tools:context=".ItemDetailsActivity">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_above="@+id/rl_cart_buttons">
+
+ <RelativeLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content">
+
+
+
+     <androidx.cardview.widget.CardView
+         android:id="@+id/activity_item_cv"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         app:cardCornerRadius="0dp"
+         android:elevation="0dp">
+         <ImageView
+             android:id="@+id/activity_item_details_iv"
+             android:layout_width="match_parent"
+             android:layout_height="300dp"
+             android:src="@drawable/tech_center_logo"
+             android:contentDescription="@null"/>
+         <ProgressBar
+             android:id="@+id/activity_item_details_image_pb"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center"
+             android:indeterminateTint="@color/black" />
+     </androidx.cardview.widget.CardView>
+
+     <TextView
+         android:id="@+id/activity_item_details_tv_title"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/activity_item_cv"
+         android:layout_marginStart="8dp"
+         android:layout_marginTop="8dp"
+         android:layout_marginEnd="8dp"
+         android:text="@string/app_name"
+         android:textColor="@color/dark"
+         android:textSize="20sp"
+         android:textStyle="bold" />
+
+     <TextView
+         android:id="@+id/activity_item_details_tv_category_name"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/activity_item_details_tv_title"
+         android:layout_marginStart="8dp"
+         android:layout_marginEnd="8dp"
+         android:layout_marginBottom="8dp"
+         android:text="@string/app_name"
+         android:textColor="@color/muted"
+         android:textSize="12sp" />
+
+
+     <TextView
+         android:id="@+id/activity_item_details_tv_description"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textColor="@color/muted"
+         android:textSize="14sp"
+         android:text="@string/app_name"
+         android:layout_marginTop="8dp"
+         android:layout_marginEnd="8dp"
+         android:layout_marginStart="8dp"
+         android:layout_below="@+id/activity_item_details_tv_category_name"
+         android:layout_marginBottom="10dp"/>
+
+     <TextView
+         android:id="@+id/activity_item_details_tv_price"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/activity_item_details_tv_description"
+         android:layout_marginStart="8dp"
+         android:layout_marginTop="8dp"
+         android:layout_marginEnd="8dp"
+         android:layout_marginBottom="10dp"
+         android:text="@string/app_name"
+         android:textColor="@color/black"
+         android:textSize="20sp" />
+
+
+     <EditText
+         android:id="@+id/et_comment"
+         android:visibility="gone"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/activity_item_details_tv_price"
+         android:layout_marginStart="8dp"
+         android:layout_marginTop="8dp"
+         android:layout_marginEnd="8dp"
+         android:layout_marginBottom="8dp"
+         android:background="@drawable/et_primary"
+         android:gravity="start"
+         android:hint="@string/any_comment"
+         android:inputType="textMultiLine|textCapSentences"
+         android:lines="4"
+         android:maxLength="155"
+         android:maxLines="4"
+         android:minLines="4"
+         android:padding="5dp"
+         android:scrollbars="vertical"
+         android:textSize="14sp" />
+ </RelativeLayout>
+
+</ScrollView>
+    <RelativeLayout
+        android:id="@+id/rl_cart_buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+    <include
+        layout="@layout/divider"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentTop="true"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_quantity"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/ib_minus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/btn_primary_border_sm"
+                android:contentDescription="@null"
+                android:padding="5dp"
+                android:src="@drawable/ic_minus"
+                app:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/text_quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_toEndOf="@+id/ib_minus"
+                android:padding="5dp"
+                android:text="1"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/ib_plus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/text_quantity"
+                android:background="@drawable/btn_primary_border_sm"
+                android:contentDescription="@null"
+                android:padding="5dp"
+                android:src="@drawable/ic_plus"
+                app:tint="@color/white" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/activity_item_details_btn_add_to_cart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_below="@+id/rl_quantity"
+            style="?android:attr/borderlessButtonStyle"
+            android:background="@drawable/btn_danger"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
